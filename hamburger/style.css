@@ -1,0 +1,86 @@
+html,body{
+  margin:0px;
+  font-family: Roboto, Arial, Helvetica;
+}
+.overflow-control{
+  overflow-x: hidden;
+}
+.main-container{
+  white-space: nowrap;
+  position: relative;
+  left: -300px;
+  transition: left 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.main-container.open{
+  left:0px;
+}
+
+.main-container *{
+  white-space: normal;
+}
+
+.main-container .content, .main-container .lateral-menu{
+  display: inline-block;
+  margin-right:-4px;
+  vertical-align: top;
+  height: 100vh;
+}
+.main-container .lateral-menu{
+  width: 300px;
+  background-color: #222;
+  color:white;
+  text-align: center;
+}
+
+.main-container .lateral-menu li{
+  font-size: 32px;
+  padding: 8px 15px;
+  list-style-type: none;
+  border-bottom: solid 2px #eee;
+}
+
+.main-container .content{
+  overflow-y: scroll;
+}
+.main-container .content{
+  width: 100%;
+}
+
+
+.hero-image{
+  height: 75vh;
+  background: url('background.png'), black;
+  background-size: cover;
+  background-position: center;
+  padding:2em;
+  color:white;
+
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5%;
+}
+.hero-image h1{
+  font-size: 72px;
+  margin:0px;
+  text-shadow: 0px 0px 4px #000;
+}
+.hero-image p{
+  font-size: 24px;
+  text-shadow: 0px 0px 2px #000;
+}
+.nav{
+  background-color: #303f9f;
+  color:white;
+  width: 100%;
+  padding:5px;
+}
+.nav li{
+  display: inline-block;
+  margin-right: 1em;
+  padding:10px;
+}
+.nav .button-nav{
+  display: inline-block;
+  vertical-align: middle;
+}

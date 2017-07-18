@@ -1,0 +1,61 @@
+body{
+  background-color: #eee;
+}
+.card{
+  background: white;
+  display: inline-block;
+  padding: 7px;
+  border-radius:2px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+  width:240px;
+  height: 200px;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.zoomIn, .zoomOut{
+  animation: zoomIn 225ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.zoomOut{
+  animation-direction: reverse;
+}
+
+.rippleIn, .rippleOut{
+  animation: rippleIn 225ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+@keyframes rippleIn{
+  0%{
+    transform: scale(0);
+    border-radius: 50%;
+    opacity: 0;
+  }
+  40%{
+    border-radius: 50%;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+    border-radius: inherit;
+  }
+}
+
+
+@keyframes zoomIn{
+  0%{
+    transform: scale(0);
+    opacity: 0;
+  }
+  40%{
+    opacity: 0.25;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}

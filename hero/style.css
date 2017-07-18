@@ -1,0 +1,25 @@
+html,body{
+  margin:0px;
+  font-family: Roboto, Arial, Helvetica;
+}
+.hero-image{
+  height: 75vh;
+  background: url('background.png'), black;
+  background-size: cover;
+  background-position: center;
+  padding:2em;
+  color:white;
+
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5%;
+}
+.hero-image h1{
+  font-size: 72px;
+  margin:0px;
+  text-shadow: 0px 0px 4px #000;
+}
+.hero-image p{
+  font-size: 24px;
+  text-shadow: 0px 0px 2px #000;
+}

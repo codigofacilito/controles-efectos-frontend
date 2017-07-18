@@ -1,0 +1,60 @@
+.input-form{
+  position: relative;
+  padding-top: 12px;
+}
+
+.input-form input{
+  width: 100%;
+  border:none;
+  padding:8px 0px;
+  border-bottom: solid 1px #bdbdbd;
+}
+
+.input-form input:focus{
+  outline: none;
+}
+
+.input-form input:focus + label, .input-form input.non-empty + label{
+  font-size: 0.6em;
+  margin-top: -12px;
+}
+
+.input-form label{
+  position: absolute;
+  top:14px;
+  left:0px;
+  pointer-events: none;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+.input-form label::after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  left:0%;
+  height: 1px;
+  background-color:currentColor;
+  visibility: hidden;
+  transform:scale(0);
+  bottom: -30px;
+  transition: transform 0.15s cubic-bezier(0.4, 0.0, 0.2, 1);
+  transition-delay: 0.15s;
+}
+
+.input-form input:focus + label::after, .input-form input.non-empty + label::after{
+  transform: scale(1);
+  visibility: visible;
+}
+
+.input-form input:valid + label{
+  color:#1565c0;
+}
+
+.input-form input:invalid + label{
+  color:#d32f2f;
+}
+
+.input-form input:not(:focus):not(.non-empty) + label{
+  color: #bdbdbd;
+}
