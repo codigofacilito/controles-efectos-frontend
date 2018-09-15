@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      body{
+        background-color: black;
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        font-family: Roboto;
+        color:white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Hola a todos</h1>
+    <script src="./animate-letters.js">
+
+    </script>
+    <script>
+      Animator.animate({
+        selector: 'h1',
+        stagger:500,
+        staggerPerLetter: 30
+      })
+    </script>
+  </body>
+</html>

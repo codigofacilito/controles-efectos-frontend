@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      html,body{margin:0px;}
+      .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap:1em;
+      }
+      .container:hover .option{
+        filter: blur(2px);
+      }
+      .container .option{
+        transform:scale(1);
+        transition: all 0.3s ease-in;
+      }
+      .container .option:hover{
+        filter: blur(0px);
+        transform:scale(1.05);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <article class="option">
+        <h3>Hola</h3>
+        <p>The repeat() CSS function represents a repeated fragment of the ... in the CSS Grid properties grid-template-columns and grid-template-rows .</p>
+      </article>
+
+      <article class="option">
+        <h3>Hola</h3>
+        <p>The repeat() CSS function represents a repeated fragment of the ... in the CSS Grid properties grid-template-columns and grid-template-rows .</p>
+      </article>
+
+      <article class="option">
+        <h3>Hola</h3>
+        <p>The repeat() CSS function represents a repeated fragment of the ... in the CSS Grid properties grid-template-columns and grid-template-rows .</p>
+      </article>
+
+      <article class="option">
+        <h3>Hola</h3>
+        <p>The repeat() CSS function represents a repeated fragment of the ... in the CSS Grid properties grid-template-columns and grid-template-rows .</p>
+      </article>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="./calendar.css">
+  </head>
+  <body>
+    <div class="calendar">
+
+    </div>
+
+    <script src="./Calendar.js"></script>
+
+    <script>
+      calendar = new Calendar({
+        container: document.querySelector('.calendar'),
+        onselect: function(date){
+            console.log(date);
+        }
+      });
+    </script>
+  </body>
+</html>
